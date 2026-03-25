@@ -41,8 +41,8 @@ Each license supports 1 active machine. To transfer:
 1. Click **Settings → License → Deactivate** on your old machine
 2. Activate on the new machine with the same key
 
-If your old machine is gone, contact [brendan@moonstonelabs.co.za](mailto:brendan@moonstonelabs.co.za) with your purchase proof to reset the activation.
+If your old machine is gone, contact [support@surfagent.app](mailto:support@surfagent.app) with your purchase proof to reset the activation.
 
 ## Enterprise / Team Licenses
 
-Need SurfAgent on multiple machines? Email for pricing: [brendan@moonstonelabs.co.za](mailto:brendan@moonstonelabs.co.za)
+Need SurfAgent on multiple machines? Email for pricing: [support@surfagent.app](mailto:support@surfagent.app)

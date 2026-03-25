@@ -18,4 +18,4 @@ Official documentation for [SurfAgent](https://surfagent.app) — the Windows AI
 - **Download:** [surfagent.app](https://surfagent.app)
 - **Portal:** [app.surfagent.app](https://app.surfagent.app)
 - **MCP Server:** [github.com/surfagentapp/surfagent-mcp](https://github.com/surfagentapp/surfagent-mcp)
-- **Support:** [brendan@moonstonelabs.co.za](mailto:brendan@moonstonelabs.co.za)
+- **Support:** [support@surfagent.app](mailto:support@surfagent.app)

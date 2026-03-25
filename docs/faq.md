@@ -34,7 +34,7 @@ The trial starts on first launch, keyed to your machine ID. No account or credit
 
 ## Can I transfer my license to a new machine?
 
-Yes. Deactivate on the old machine via Settings → License → Deactivate, then activate on the new machine. If you can't deactivate (machine is gone), email [brendan@moonstonelabs.co.za](mailto:brendan@moonstonelabs.co.za).
+Yes. Deactivate on the old machine via Settings → License → Deactivate, then activate on the new machine. If you can't deactivate (machine is gone), email [support@surfagent.app](mailto:support@surfagent.app).
 
 ## Is the MCP server free?
 
@@ -49,4 +49,4 @@ Yes. `surfagent-mcp` is open source and free forever: [github.com/surfagentapp/s
 
 ## How do I report a bug or request a feature?
 
-Open an issue on [GitHub](https://github.com/surfagentapp/surfagent-docs/issues) or email [brendan@moonstonelabs.co.za](mailto:brendan@moonstonelabs.co.za).
+Open an issue on [GitHub](https://github.com/surfagentapp/surfagent-docs/issues) or email [support@surfagent.app](mailto:support@surfagent.app).
