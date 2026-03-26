@@ -44,8 +44,7 @@ curl -X POST http://localhost:7201/browser/crawl \
 | `excludePatterns` | string[] | — | Glob patterns — skip URLs matching these |
 | `prompt` | string | — | LLM extraction prompt (applied to each page) |
 | `schema` | object | — | JSON Schema for structured extraction per page |
-| `waitMs` | number | `1000` | Wait between page loads (ms). Be respectful. |
-| `concurrency` | number | `1` | Parallel pages (currently capped at 1) |
+| `waitMs` | number | `0` | Additional wait between page loads (ms). Minimum 1.5s is enforced internally. |
 
 **Example request:**
 
@@ -112,8 +111,8 @@ curl -X POST http://localhost:7201/browser/map \
 | Field | Type | Default | Description |
 |-------|------|---------|-------------|
 | `url` | string | **required** | Starting URL |
-| `maxPages` | number | `100` | Max pages to visit |
-| `maxDepth` | number | `5` | Max link depth |
+| `maxPages` | number | `50` | Max pages to visit (hard limit: 50) |
+| `maxDepth` | number | `5` | Max link depth (hard limit: 10) |
 
 ### Response
 
@@ -234,7 +233,7 @@ Claude will use the appropriate MCP tool with the right parameters.
 - **Same-origin only by default.** The crawler won't follow links off the starting domain.
 - **Visited URL deduplication.** Each URL is visited at most once per crawl.
 - **Tab discipline.** A single tab is reused and navigated between pages. Opened and closed cleanly.
-- **Politeness.** Default `waitMs: 1000` adds a 1s gap between page loads. Reduce carefully.
+- **Politeness.** A minimum 1.5s wait between page loads is enforced internally. Additional wait can be set with `waitMs`.
 - **Real Chrome advantage.** Sites with Cloudflare, bot detection, or JavaScript gating that block headless tools work fine through SurfAgent's real Chrome.
 
 ---
