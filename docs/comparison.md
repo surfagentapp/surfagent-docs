@@ -6,16 +6,51 @@ There are several ways to give an AI agent browser control. Here's how SurfAgent
 
 ## TL;DR
 
-| | SurfAgent | Browserbase | Steel | Playwright MCP | AgentQL |
-|---|---|---|---|---|---|
-| **Where it runs** | Your machine | Cloud | Cloud | Your machine | Cloud/local |
-| **Price** | $49 one-time | $0.10+/hr (metered) | Usage-based | Free (OSS) | Freemium |
-| **Your sessions/cookies** | ✅ Persistent | ❌ Ephemeral | ❌ Ephemeral | ✅ Local | ❌ |
-| **Works offline** | ✅ | ❌ | ❌ | ✅ | ❌ |
-| **Data leaves machine** | ❌ Never | ✅ All traffic | ✅ All traffic | ❌ | ✅ |
-| **Bot detection bypass** | ✅ Real Chrome | ✅ Built-in | ✅ Built-in | ⚠️ Headless | ✅ |
-| **MCP ready** | ✅ | ❌ Native | ❌ Native | ✅ | ❌ |
-| **Setup complexity** | Low | Medium | Medium | High | Medium |
+| | SurfAgent | Firecrawl | Browserbase | Steel | Playwright MCP | AgentQL |
+|---|---|---|---|---|---|---|
+| **Where it runs** | Your machine | Cloud | Cloud | Cloud | Your machine | Cloud/local |
+| **Price** | $49 one-time | $19–399/mo | $0.10+/hr (metered) | Usage-based | Free (OSS) | Freemium |
+| **Your sessions/cookies** | ✅ Persistent | ❌ Ephemeral | ❌ Ephemeral | ❌ Ephemeral | ✅ Local | ❌ |
+| **Works offline** | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| **Data leaves machine** | ❌ Never | ✅ All traffic | ✅ All traffic | ✅ All traffic | ❌ | ✅ |
+| **Bot detection bypass** | ✅ Real Chrome | ✅ Headless | ✅ Built-in | ✅ Built-in | ⚠️ Headless | ✅ |
+| **MCP ready** | ✅ | ✅ | ❌ Native | ❌ Native | ✅ | ❌ |
+| **Setup complexity** | Low | Low | Medium | Medium | High | Medium |
+
+---
+
+## Firecrawl
+
+**What it is:** Cloud API for web scraping and data extraction. Send a URL, get back clean markdown, structured JSON, or a full site crawl. Developer-friendly, well-documented, popular in the AI agent ecosystem.
+
+**Best for:** Teams who want a simple hosted API and don't mind sending their data through a third-party service.
+
+**How it compares to SurfAgent:**
+
+Firecrawl and SurfAgent now have feature parity on the extraction side:
+
+| Feature | SurfAgent | Firecrawl |
+|---------|-----------|-----------|
+| `/extract` — LLM-powered structured extraction | ✅ | ✅ |
+| `/crawl` — BFS site crawling | ✅ | ✅ |
+| `/map` — Sitemap discovery | ✅ | ✅ |
+| MCP server | ✅ | ✅ |
+| Real browser (not headless) | ✅ | ❌ |
+| Persistent login sessions | ✅ | ❌ |
+| 100% local / data never leaves machine | ✅ | ❌ |
+| One-time price | ✅ $49 | ❌ $19–399/mo |
+
+**Downsides vs SurfAgent:**
+- **Cloud API, ongoing cost.** Firecrawl starts at $19/mo and goes up to $399/mo for serious usage. SurfAgent is $49 once.
+- **Headless Chrome in the cloud.** Firecrawl runs headless Chrome instances that get blocked by serious anti-bot systems (Cloudflare, Akamai, advanced WAFs). SurfAgent uses your real installed Chrome with a real fingerprint — the exact same browser you'd use manually.
+- **No persistent sessions.** Firecrawl can't scrape pages that require login state. SurfAgent uses your real Chrome profile — log in once, and your agent can access authenticated pages forever.
+- **Your data goes through their servers.** Every page you scrape flows through Firecrawl's infrastructure. SurfAgent is 100% local — your page data never touches a third-party server.
+- **No privacy for sensitive pages.** If you're extracting anything from internal tools, authenticated dashboards, or proprietary data, Firecrawl processes all of it. SurfAgent doesn't.
+
+**When Firecrawl is the better choice:**
+- You need a fully managed, zero-setup cloud API
+- You're running server-side pipelines without a Windows machine available
+- The pages you're scraping are public and don't require login
 
 ---
 
