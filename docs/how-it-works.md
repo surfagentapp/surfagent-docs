@@ -32,7 +32,7 @@
 ### SurfAgent App (Tauri Desktop)
 The desktop application manages everything. It:
 - Launches Chrome with `--remote-debugging-port=9222`
-- Starts the daemon process (Rust binary)
+- Starts the daemon process (standalone Node.js binary)
 - Provides a settings/status UI
 - Handles license activation and trial management
 
