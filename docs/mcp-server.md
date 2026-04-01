@@ -1,6 +1,6 @@
 # MCP Server Setup
 
-The `surfagent-mcp` package gives any MCP-compatible AI agent 21 browser-control tools powered by your local SurfAgent instance.
+The `surfagent-mcp` package gives any MCP-compatible AI agent 24 browser-control tools powered by your local SurfAgent instance.
 
 **Requires:** SurfAgent running with daemon on port 7201.
 
@@ -15,6 +15,26 @@ npx -y surfagent-mcp
 Or install globally:
 ```bash
 npm install -g surfagent-mcp
+```
+
+## Hermes Agent
+
+```bash
+hermes mcp add surfagent --command npx --args -y surfagent-mcp
+```
+
+Or add to `~/.hermes/config.yaml`:
+```yaml
+mcp:
+  servers:
+    - name: surfagent
+      command: npx
+      args: ["-y", "surfagent-mcp"]
+```
+
+You can also install the SurfAgent skill for enhanced browser automation instructions:
+```bash
+hermes skills install github:surfagentapp/surfagent-skill
 ```
 
 ## Claude Code
@@ -33,6 +53,16 @@ Or add to `~/.claude/mcp.json`:
     }
   }
 }
+```
+
+## Codex CLI
+
+Add to `~/.codex/config.yaml`:
+```yaml
+mcp_servers:
+  - name: surfagent
+    command: npx
+    args: ["-y", "surfagent-mcp"]
 ```
 
 ## Cursor
@@ -63,50 +93,47 @@ Add to `~/.codeium/windsurf/mcp_config.json`:
 }
 ```
 
-## Codex CLI
+## Available Tools (24)
 
-Add to `~/.codex/config.yaml`:
-```yaml
-mcp_servers:
-  - name: surfagent
-    command: npx
-    args: ["-y", "surfagent-mcp"]
-```
+### Navigation (3)
+- `browser_navigate` — Open a URL in the current tab
+- `browser_back` — Navigate browser history back
+- `browser_forward` — Navigate browser history forward
 
-## Available Tools (21)
+### Tabs (4)
+- `browser_list_tabs` — List open browser tabs with IDs and titles
+- `browser_new_tab` — Open a new browser tab
+- `browser_switch_tab` — Switch to a tab by id, index, or title
+- `browser_close_tab` — Close a browser tab by id (or current active tab)
 
-### Navigation
-- `navigate` — Open a URL in the current tab
-- `reload` — Reload the current page
-- `go_back` / `go_forward` — Browser history navigation
+### Interaction (5)
+- `browser_click` — Click an element by CSS selector, text content, or coordinates
+- `browser_type` — Type text into a focused element
+- `browser_fill_form` — Fill multiple form fields using label/name to value mappings
+- `browser_select` — Select an option from a dropdown element
+- `browser_scroll` — Scroll the page up/down or to a specific element
 
-### Tabs
-- `open_tab` — Open a URL in a new tab
-- `list_tabs` — List all open tabs with IDs and titles
-- `focus_tab` — Switch to a tab by ID
-- `close_tab` — Close a tab by ID
+### Observation (6)
+- `browser_screenshot` — Capture full-page or viewport screenshot (PNG)
+- `browser_get_text` — Get visible text content from the page or a matched element
+- `browser_get_html` — Get page HTML source
+- `browser_get_url` — Get the current browser tab URL
+- `browser_get_title` — Get the current browser tab title
+- `browser_find_elements` — Find elements matching a CSS selector
 
-### Interaction
-- `click` — Click an element by CSS selector
-- `type_text` — Type text into a focused element
-- `fill_field` — Fill a form field by selector + value
-- `select_option` — Select a `<select>` dropdown value
-- `press_key` — Send a keyboard key press
-- `scroll` — Scroll the page up/down/to element
+### JavaScript (1)
+- `browser_evaluate` — Run JavaScript in the page context and return the result
 
-### Observation
-- `screenshot` — Capture full-page or viewport screenshot
-- `get_content` — Get visible page text
-- `get_html` — Get page HTML source
-- `inspect_element` — Get attributes/text of a DOM element
+### Waiting (1)
+- `browser_wait` — Wait for an element to appear
 
-### JavaScript
-- `evaluate` — Execute arbitrary JavaScript and return result
+### Cookies (1)
+- `browser_cookies` — Get or set browser cookies
 
-### Cookies
-- `get_cookies` — Get all cookies for the current domain
-- `set_cookie` — Set a cookie
-- `clear_cookies` — Clear cookies for domain
+### Extraction (3)
+- `browser_extract` — Extract structured data from a page (markdown, JSON, links, screenshot)
+- `browser_crawl` — Crawl a website using BFS, extracting content from each page
+- `browser_map` — Discover all URLs on a website without extracting full content
 
 ## Custom Daemon URL
 

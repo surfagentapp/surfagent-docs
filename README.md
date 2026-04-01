@@ -11,11 +11,18 @@ Official documentation for [SurfAgent](https://surfagent.app) — the Windows AI
 - [Auto-Updates](./docs/updates.md)
 - [FAQ](./docs/faq.md)
 - [Competitor Comparison](./docs/comparison.md)
+- [Extract (Structured Data)](./docs/extract.md)
+- [Crawl & Map](./docs/crawl.md)
 - [Changelog](./CHANGELOG.md)
+
+## Works With
+
+Hermes Agent, Claude Code, Codex, Cursor, Windsurf, OpenClaw, and any MCP or CDP-compatible AI agent. 24 browser control tools via MCP, plus a full REST API.
 
 ## Quick Links
 
 - **Download:** [surfagent.app](https://surfagent.app)
 - **Portal:** [app.surfagent.app](https://app.surfagent.app)
 - **MCP Server:** [github.com/surfagentapp/surfagent-mcp](https://github.com/surfagentapp/surfagent-mcp)
+- **Hermes/OpenClaw Skill:** [github.com/surfagentapp/surfagent-skill](https://github.com/surfagentapp/surfagent-skill)
 - **Support:** [support@surfagent.app](mailto:support@surfagent.app)

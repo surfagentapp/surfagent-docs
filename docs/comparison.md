@@ -126,7 +126,7 @@ Cloud browser services are metered. A developer using them seriously for a month
 Your browser traffic, your data, your machine. Nothing goes through a third-party server.
 
 ### 5. MCP-native
-Works out of the box with Claude Code, Cursor, Windsurf, and Codex via `npx -y surfagent-mcp`. No SDK required, no API keys.
+Works out of the box with Hermes Agent, Claude Code, Cursor, Windsurf, Codex, and OpenClaw via `npx -y surfagent-mcp`. 24 browser tools discovered automatically. No SDK required, no API keys.
 
 ### 6. Works offline
 Pull a laptop out on a flight, your local agent still works. Not a real concern for most, but meaningful for others.

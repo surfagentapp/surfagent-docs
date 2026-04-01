@@ -28,13 +28,21 @@ SurfAgent requires Google Chrome. If it's not installed, download it from [googl
 
 Yes. The daemon at `http://localhost:7201` is a plain HTTP API. You can call it directly from any script, tool, or application. See [How It Works](./how-it-works.md) for the full API reference.
 
-## How does the 7-day trial work?
+## How does the 48-hour trial work?
 
-The trial starts on first launch, keyed to your machine ID. No account or credit card required. After 7 days, the app prompts you to purchase. The countdown is shown in the app sidebar.
+The trial starts on first launch, keyed to your machine ID. No account or credit card required. After 48 hours, the app prompts you to purchase. The countdown is shown in the app sidebar.
 
 ## Can I transfer my license to a new machine?
 
 Yes. Deactivate on the old machine via Settings → License → Deactivate, then activate on the new machine. If you can't deactivate (machine is gone), email [support@surfagent.app](mailto:support@surfagent.app).
+
+## How do I connect Hermes Agent?
+
+One command:
+```bash
+hermes mcp add surfagent --command npx --args -y surfagent-mcp
+```
+Hermes discovers all 24 browser tools automatically. You can also install the SurfAgent skill for enhanced instructions: `hermes skills install github:surfagentapp/surfagent-skill`
 
 ## Is the MCP server free?
 

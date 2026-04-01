@@ -2,9 +2,9 @@
 
 ## Free Trial
 
-SurfAgent includes a **7-day free trial** — no credit card, no account required.
+SurfAgent includes a **48-hour free trial** — no credit card, no account required.
 
-The trial starts automatically on first launch, keyed to your machine. A countdown badge appears in the app sidebar showing days remaining. When the trial expires, a prompt will guide you to purchase.
+The trial starts automatically on first launch, keyed to your machine. A countdown badge appears in the app sidebar showing time remaining. When the trial expires, a prompt will guide you to purchase.
 
 ## Purchasing
 

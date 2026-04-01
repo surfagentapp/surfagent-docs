@@ -8,15 +8,15 @@
 │                                                  │
 │  ┌──────────────┐    ┌──────────────────────┐   │
 │  │  AI Agent    │    │    SurfAgent App      │   │
-│  │ (Claude Code │◄──►│  (Tauri + Vite UI)   │   │
-│  │  / Cursor /  │    └──────────┬───────────┘   │
-│  │  Windsurf)   │               │               │
+│  │ (Hermes /   │◄──►│  (Tauri + Vite UI)   │   │
+│  │  Claude Code │    └──────────┬───────────┘   │
+│  │  / Cursor)   │               │               │
 │  └──────┬───────┘               │               │
 │         │ MCP / HTTP            │ manages        │
 │         ▼                       ▼               │
 │  ┌──────────────┐    ┌──────────────────────┐   │
 │  │surfagent-mcp │    │   SurfAgent Daemon   │   │
-│  │  (npx/local) │◄──►│  (Rust, port 7201)   │   │
+│  │  (npx/local) │◄──►│  (Node.js, port 7201)│   │
 │  └──────────────┘    └──────────┬───────────┘   │
 │                                 │  CDP           │
 │                                 ▼               │
@@ -36,15 +36,15 @@ The desktop application manages everything. It:
 - Provides a settings/status UI
 - Handles license activation and trial management
 
-### SurfAgent Daemon (Rust)
-A lightweight HTTP server running on `http://localhost:7201`. It:
+### SurfAgent Daemon (Node.js)
+A lightweight HTTP server running on `http://localhost:7201`, compiled to a standalone executable. It:
 - Accepts REST API calls from MCP server or direct HTTP clients
 - Translates requests into Chrome DevTools Protocol (CDP) commands
 - Manages tab lifecycle, navigation, screenshots, DOM access
 - Maintains a persistent Chrome session
 
 ### surfagent-mcp
-A Model Context Protocol server that wraps the daemon API into 21 named tools that AI agents understand. It runs via `npx -y surfagent-mcp` and connects to `localhost:7201`.
+A Model Context Protocol server that wraps the daemon API into 24 named tools that AI agents understand. It runs via `npx -y surfagent-mcp` and connects to `localhost:7201`. Compatible with Hermes Agent, Claude Code, Codex, Cursor, Windsurf, and any MCP client.
 
 ### Chrome (Managed Instance)
 SurfAgent launches Chrome with:

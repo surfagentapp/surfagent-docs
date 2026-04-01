@@ -7,7 +7,7 @@ SurfAgent is a Windows desktop app that runs a managed Chrome browser on your ma
 - Windows 10 or 11 (64-bit)
 - Google Chrome installed
 - Node.js 20+ (for MCP server)
-- Claude Code, Cursor, Windsurf, or any MCP-compatible AI agent
+- Hermes Agent, Claude Code, Cursor, Windsurf, Codex, or any MCP-compatible AI agent
 
 ## Install
 
@@ -37,6 +37,29 @@ Then in any Claude Code session:
 "Open YouTube and search for Tauri tutorials"
 "Take a screenshot of the current tab"
 "Fill in this form: name=John, email=john@example.com"
+```
+
+### Hermes Agent
+
+```bash
+hermes mcp add surfagent --command npx --args -y surfagent-mcp
+```
+
+Then ask Hermes to browse, extract, or automate anything. All 24 browser tools are discovered automatically.
+
+Or install the SurfAgent skill for enhanced instructions:
+```bash
+hermes skills install github:surfagentapp/surfagent-skill
+```
+
+### Codex CLI
+
+Add to `~/.codex/config.yaml`:
+```yaml
+mcp_servers:
+  - name: surfagent
+    command: npx
+    args: ["-y", "surfagent-mcp"]
 ```
 
 ### Cursor / Windsurf / Other MCP Clients
@@ -74,7 +97,7 @@ Full API reference: [How It Works](./how-it-works.md)
 
 ## Activate Your License
 
-After downloading, you have a **7-day free trial** — no credit card required. The trial counter starts on first launch.
+After downloading, you have a **48-hour free trial** — no credit card required. The trial counter starts on first launch.
 
 When you're ready to buy ($49 one-time):
 1. Click **Activate** in the app sidebar
