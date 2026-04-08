@@ -52,6 +52,8 @@ For enhanced instructions, use the canonical skills catalog in [`surfagent-skill
 hermes skills install github:surfagentapp/surfagent-skill
 ```
 
+Need the repo map first? See [Repositories & Ownership](./repositories.md).
+
 ### Codex CLI
 
 Add to `~/.codex/config.yaml`:
@@ -76,7 +78,7 @@ Add to your MCP config:
 }
 ```
 
-> Canonical repo ownership: `surfagent-docs` = public docs, `surfagent-skills` = public skills catalog, `surfagent-skill` = legacy compatibility repo.
+> Canonical repo ownership: `surfagent-docs` = public docs, `surfagent-skills` = public skills catalog, `surfagent-skill` = legacy compatibility repo. Full map: [Repositories & Ownership](./repositories.md).
 
 ### Direct HTTP API
 
