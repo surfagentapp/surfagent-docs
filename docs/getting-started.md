@@ -47,7 +47,7 @@ hermes mcp add surfagent --command npx --args -y surfagent-mcp
 
 Then ask Hermes to browse, extract, or automate anything. All 24 browser tools are discovered automatically.
 
-Or install the SurfAgent skill for enhanced instructions:
+For enhanced instructions, use the canonical skills catalog in [`surfagent-skills`](https://github.com/surfagentapp/surfagent-skills). The older single-repo install below still works as a legacy compatibility path while docs and tooling finish migrating:
 ```bash
 hermes skills install github:surfagentapp/surfagent-skill
 ```
@@ -75,6 +75,8 @@ Add to your MCP config:
   }
 }
 ```
+
+> Canonical repo ownership: `surfagent-docs` = public docs, `surfagent-skills` = public skills catalog, `surfagent-skill` = legacy compatibility repo.
 
 ### Direct HTTP API
 

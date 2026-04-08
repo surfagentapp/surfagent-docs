@@ -42,7 +42,7 @@ One command:
 ```bash
 hermes mcp add surfagent --command npx --args -y surfagent-mcp
 ```
-Hermes discovers all 24 browser tools automatically. You can also install the SurfAgent skill for enhanced instructions: `hermes skills install github:surfagentapp/surfagent-skill`
+Hermes discovers all 24 browser tools automatically. The canonical skill catalog now lives in [`surfagent-skills`](https://github.com/surfagentapp/surfagent-skills). If you need the older single-repo install during migration, this legacy compatibility path still works: `hermes skills install github:surfagentapp/surfagent-skill`
 
 ## Is the MCP server free?
 

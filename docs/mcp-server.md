@@ -32,7 +32,7 @@ mcp:
       args: ["-y", "surfagent-mcp"]
 ```
 
-You can also install the SurfAgent skill for enhanced browser automation instructions:
+You can also use the canonical skills catalog in [`surfagent-skills`](https://github.com/surfagentapp/surfagent-skills) for enhanced browser automation instructions. The older single-repo install below remains as a legacy compatibility path during migration:
 ```bash
 hermes skills install github:surfagentapp/surfagent-skill
 ```
@@ -92,6 +92,8 @@ Add to `~/.codeium/windsurf/mcp_config.json`:
   }
 }
 ```
+
+> Canonical repo ownership: `surfagent-mcp` = MCP server, `surfagent-skills` = public skills catalog, `surfagent-skill` = legacy compatibility repo.
 
 ## Available Tools (24)
 

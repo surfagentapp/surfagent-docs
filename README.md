@@ -24,5 +24,8 @@ Hermes Agent, Claude Code, Codex, Cursor, Windsurf, OpenClaw, and any MCP or CDP
 - **Download:** [surfagent.app](https://surfagent.app)
 - **Portal:** [app.surfagent.app](https://app.surfagent.app)
 - **MCP Server:** [github.com/surfagentapp/surfagent-mcp](https://github.com/surfagentapp/surfagent-mcp)
-- **Hermes/OpenClaw Skill:** [github.com/surfagentapp/surfagent-skill](https://github.com/surfagentapp/surfagent-skill)
+- **Skills Catalog (canonical):** [github.com/surfagentapp/surfagent-skills](https://github.com/surfagentapp/surfagent-skills)
+- **Legacy compatibility skill:** [github.com/surfagentapp/surfagent-skill](https://github.com/surfagentapp/surfagent-skill)
 - **Support:** [support@surfagent.app](mailto:support@surfagent.app)
+
+> Repo ownership: `surfagent-docs` is the canonical public docs repo, `surfagent-skills` is the canonical public skills repo, and `surfagent-skill` is legacy compatibility only while older install references are being migrated.
