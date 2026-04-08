@@ -1,4 +1,26 @@
-# FAQ
+# FAQ & Troubleshooting
+
+If you are still setting SurfAgent up, the main flow is:
+- [Start Here](./start-here.md)
+- [Getting Started](./getting-started.md)
+- [Connect Your AI Agent (MCP Server)](./mcp-server.md)
+
+## Troubleshooting
+
+## I can't connect to the SurfAgent daemon
+
+1. Make sure SurfAgent is running
+2. Check the app shows the browser and daemon are up
+3. Verify `http://localhost:7201` responds locally
+4. Restart SurfAgent if needed
+5. Re-check your MCP client config
+
+## Chrome did not launch properly
+
+1. Make sure Google Chrome is installed
+2. Restart SurfAgent
+3. Check whether another tool is already occupying the debugging port
+4. Re-open the app and confirm the managed browser starts
 
 ## Does SurfAgent work on Mac or Linux?
 
@@ -47,13 +69,6 @@ Hermes discovers all 24 browser tools automatically. The canonical skill catalog
 ## Is the MCP server free?
 
 Yes. `surfagent-mcp` is open source and free forever: [github.com/surfagentapp/surfagent-mcp](https://github.com/surfagentapp/surfagent-mcp). The license covers the app and daemon — the MCP protocol layer has no cost.
-
-## I'm getting "Cannot connect to SurfAgent daemon" errors
-
-1. Make sure SurfAgent is running (check system tray)
-2. Check the app shows "Browser: Running" in the dashboard
-3. Verify port 7201 isn't blocked by a firewall
-4. Try restarting SurfAgent from the app
 
 ## How do I report a bug or request a feature?
 

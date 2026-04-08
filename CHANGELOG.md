@@ -7,6 +7,19 @@ Types: `Added`, `Fixed`, `Changed`, `Security`
 
 ---
 
+## [Unreleased]
+
+### Added
+- `docs/start-here.md` as the new public entry point for first-time users
+- `docs/skills-and-adapters.md` to explain when to use MCP, skills, and site adapters
+
+### Changed
+- Reworked `README.md` around a guided start flow instead of a flat page list
+- Rewrote `docs/getting-started.md` as a practical zero-to-working setup path
+- Reframed `docs/mcp-server.md` around connecting an AI client, with clearer prerequisites and next steps
+- Updated `docs/faq.md` into a combined FAQ and troubleshooting page
+- Demoted `docs/repositories.md` from an implied starting point to an advanced repo map
+
 ## [0.2.0] - 2026-04-01
 
 ### Added

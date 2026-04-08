@@ -1,20 +1,49 @@
-# MCP Server Setup
+# Connect Your AI Agent (MCP Server)
 
-The `surfagent-mcp` package gives any MCP-compatible AI agent 24 browser-control tools powered by your local SurfAgent instance.
+This page is for connecting your AI tool to SurfAgent.
 
-**Requires:** SurfAgent running with daemon on port 7201.
+If SurfAgent is not installed yet, start here first:
+- [Getting Started](./getting-started.md)
 
-## Installation
+The `surfagent-mcp` package gives any MCP-compatible AI agent browser-control tools powered by your local SurfAgent instance.
 
-No install needed — run via npx:
+**Requires:** SurfAgent running locally with the daemon on port `7201`.
+
+## The short version
+
+Most users only need this:
 
 ```bash
 npx -y surfagent-mcp
 ```
 
-Or install globally:
+Then add that MCP server to their AI client.
+
+## Before you begin
+
+Make sure:
+- SurfAgent is installed
+- the app is running
+- the local daemon is reachable
+
+If MCP cannot connect, check [FAQ & Troubleshooting](./faq.md).
+
+## Claude Code
+
 ```bash
-npm install -g surfagent-mcp
+claude mcp add surfagent -- npx -y surfagent-mcp
+```
+
+Or add to `~/.claude/mcp.json`:
+```json
+{
+  "mcpServers": {
+    "surfagent": {
+      "command": "npx",
+      "args": ["-y", "surfagent-mcp"]
+    }
+  }
+}
 ```
 
 ## Hermes Agent
@@ -35,24 +64,6 @@ mcp:
 You can also use the canonical skills catalog in [`surfagent-skills`](https://github.com/surfagentapp/surfagent-skills) for enhanced browser automation instructions. The older single-repo install below remains as a legacy compatibility path during migration:
 ```bash
 hermes skills install github:surfagentapp/surfagent-skill
-```
-
-## Claude Code
-
-```bash
-claude mcp add surfagent -- npx -y surfagent-mcp
-```
-
-Or add to `~/.claude/mcp.json`:
-```json
-{
-  "mcpServers": {
-    "surfagent": {
-      "command": "npx",
-      "args": ["-y", "surfagent-mcp"]
-    }
-  }
-}
 ```
 
 ## Codex CLI
@@ -95,7 +106,16 @@ Add to `~/.codeium/windsurf/mcp_config.json`:
 
 > Canonical repo ownership: `surfagent-mcp` = MCP server, `surfagent-skills` = public skills catalog, `surfagent-skill` = legacy compatibility repo.
 
-## Available Tools (24)
+## Skills and adapters
+
+MCP is the browser tool layer.
+
+If you also want better workflows or site-specific behavior, read:
+- [Skills, Adapters, and MCP: What to Use When](./skills-and-adapters.md)
+- canonical skills catalog: <https://github.com/surfagentapp/surfagent-skills>
+- legacy compatibility repo: <https://github.com/surfagentapp/surfagent-skill>
+
+## Available tools
 
 ### Navigation (3)
 - `browser_navigate` — Open a URL in the current tab
@@ -137,7 +157,7 @@ Add to `~/.codeium/windsurf/mcp_config.json`:
 - `browser_crawl` — Crawl a website using BFS, extracting content from each page
 - `browser_map` — Discover all URLs on a website without extracting full content
 
-## Custom Daemon URL
+## Custom daemon URL
 
 By default, the MCP server connects to `http://localhost:7201`. Override with:
 

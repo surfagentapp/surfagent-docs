@@ -1,6 +1,15 @@
 # SurfAgent Repositories & Ownership
 
-This page is the source of truth for which public SurfAgent repo does what.
+This page is the public repo map.
+
+Most users do **not** need this page first.
+
+If you are just trying to get SurfAgent working, start here instead:
+- [Start Here](./start-here.md)
+- [Getting Started](./getting-started.md)
+- [Connect Your AI Agent (MCP Server)](./mcp-server.md)
+
+Use this page when you need to know which public repo owns which part of the product.
 
 ## Canonical public repos
 

@@ -1,42 +1,58 @@
 # Getting Started with SurfAgent
 
-SurfAgent is a Windows desktop app that runs a managed Chrome browser on your machine. Your AI agent connects to it and gets full browser control — no cloud, no subscriptions beyond the one-time purchase, no data leaving your machine.
+This page is the practical install flow.
 
-## Requirements
+If you want the higher-level map first, read [Start Here](./start-here.md).
+
+## What you need
 
 - Windows 10 or 11 (64-bit)
 - Google Chrome installed
-- Node.js 20+ (for MCP server)
-- Hermes Agent, Claude Code, Cursor, Windsurf, Codex, or any MCP-compatible AI agent
+- Node.js 20+ if you want MCP integration
+- An AI client such as Claude Code, Codex, Cursor, Windsurf, Hermes, or OpenClaw
 
-## Install
+## Goal
+
+By the end of this page, you should have:
+- SurfAgent installed
+- the local daemon running on port `7201`
+- managed Chrome running
+- your AI ready to connect through MCP
+
+## Step 1: Install SurfAgent
 
 1. Download the installer from [surfagent.app](https://surfagent.app)
-2. Run `SurfAgent_Setup.exe` — standard Windows installer, no admin required
+2. Run `SurfAgent_Setup.exe`
 3. Launch **SurfAgent** from Start Menu or Desktop
 
-## First Launch
+## Step 2: Confirm first launch worked
 
-On first launch, SurfAgent will:
+On first launch, SurfAgent should:
+1. detect your Chrome installation
+2. start a managed Chrome instance
+3. start the local daemon on port `7201`
+4. show the local dashboard
 
-1. Detect your Chrome installation
-2. Start a managed Chrome instance with remote debugging enabled
-3. Start the local daemon on port `7201`
-4. Show your browser control dashboard at `http://localhost:7201`
+Quick checks:
+- the app is open
+- Chrome launched through SurfAgent
+- `http://localhost:7201` responds locally
 
-## Connect Your AI Agent
+If this fails, jump to [FAQ & Troubleshooting](./faq.md).
 
-### Claude Code (Recommended)
+## Step 3: Connect your AI agent
+
+Next, wire your agent to `surfagent-mcp`.
+
+Use the full setup page here:
+- [Connect Your AI Agent (MCP Server)](./mcp-server.md)
+
+Quick examples:
+
+### Claude Code
 
 ```bash
 claude mcp add surfagent -- npx -y surfagent-mcp
-```
-
-Then in any Claude Code session:
-```
-"Open YouTube and search for Tauri tutorials"
-"Take a screenshot of the current tab"
-"Fill in this form: name=John, email=john@example.com"
 ```
 
 ### Hermes Agent
@@ -44,15 +60,6 @@ Then in any Claude Code session:
 ```bash
 hermes mcp add surfagent --command npx --args -y surfagent-mcp
 ```
-
-Then ask Hermes to browse, extract, or automate anything. All 24 browser tools are discovered automatically.
-
-For enhanced instructions, use the canonical skills catalog in [`surfagent-skills`](https://github.com/surfagentapp/surfagent-skills). The older single-repo install below still works as a legacy compatibility path while docs and tooling finish migrating:
-```bash
-hermes skills install github:surfagentapp/surfagent-skill
-```
-
-Need the repo map first? See [Repositories & Ownership](./repositories.md).
 
 ### Codex CLI
 
@@ -64,9 +71,8 @@ mcp_servers:
     args: ["-y", "surfagent-mcp"]
 ```
 
-### Cursor / Windsurf / Other MCP Clients
+### Cursor / Windsurf / Other MCP clients
 
-Add to your MCP config:
 ```json
 {
   "mcpServers": {
@@ -78,34 +84,56 @@ Add to your MCP config:
 }
 ```
 
-> Canonical repo ownership: `surfagent-docs` = public docs, `surfagent-skills` = public skills catalog, `surfagent-skill` = legacy compatibility repo. Full map: [Repositories & Ownership](./repositories.md).
+## Step 4: Decide whether you also need skills or adapters
 
-### Direct HTTP API
+Most users only need:
+- SurfAgent
+- `surfagent-mcp`
 
-The daemon exposes a REST API at `http://localhost:7201`:
+You may also want:
+- **skills** for better workflows and execution rules
+- **adapters** for site-specific verbs like Gmail or Telegram Web
+
+Read this next:
+- [Skills, Adapters, and MCP: What to Use When](./skills-and-adapters.md)
+
+## Step 5: Use it
+
+Once connected, your agent should be able to do things like:
+- open a page
+- search the web
+- click through a workflow
+- fill forms
+- take screenshots
+- extract text or structured content
+
+## Direct HTTP API
+
+If you do not want MCP, you can call the daemon directly at `http://localhost:7201`.
 
 ```bash
-# Open a URL
 curl -X POST http://localhost:7201/browser/navigate \
   -H 'Content-Type: application/json' \
   -d '{"url": "https://example.com"}'
-
-# Take a screenshot
-curl http://localhost:7201/browser/screenshot > screenshot.png
-
-# List open tabs
-curl http://localhost:7201/browser/tabs
 ```
 
-Full API reference: [How It Works](./how-it-works.md)
+Architecture and API reference:
+- [How It Works](./how-it-works.md)
 
-## Activate Your License
+## Trial and activation
 
-After downloading, you have a **48-hour free trial** — no credit card required. The trial counter starts on first launch.
+SurfAgent includes a **48-hour free trial**.
 
-When you're ready to buy ($49 one-time):
-1. Click **Activate** in the app sidebar
-2. Enter your license key from [app.surfagent.app/portal](https://app.surfagent.app/portal)
-3. Or purchase directly from the app
+When you're ready to buy:
+1. click **Activate** in the app
+2. enter your key from [app.surfagent.app/portal](https://app.surfagent.app/portal)
+3. or purchase directly from the app
 
-Full details: [License & Activation](./license.md)
+Full details:
+- [License & Activation](./license.md)
+
+## What to read next
+
+- [Connect Your AI Agent (MCP Server)](./mcp-server.md)
+- [Skills, Adapters, and MCP](./skills-and-adapters.md)
+- [FAQ & Troubleshooting](./faq.md)
