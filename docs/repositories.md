@@ -30,7 +30,7 @@ Use this page when you need to know which public repo owns which part of the pro
 
 ## Public adapter repos
 
-These are platform-specific MCP adapters. Use them when you need site-native verbs instead of raw browser control.
+These are platform-specific MCP adapters. Use them only when you need site-native verbs instead of raw browser control.
 
 - `surfagent-gmail`
 - `surfagent-telegram-web`
@@ -69,3 +69,5 @@ Preferred structure:
 - generic MCP install/setup → `surfagent-mcp`
 
 That keeps repo sprawl from turning into contradictory docs.
+
+If you are just using SurfAgent, the repo map is mostly background information. Start with the app and MCP instead.

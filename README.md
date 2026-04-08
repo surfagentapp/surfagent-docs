@@ -16,7 +16,9 @@ That is the shortest path from zero to a working setup.
 
 ## What this repo is for
 
-`surfagent-docs` is the canonical public docs repo for:
+`surfagent-docs` is the canonical public docs repo.
+
+Use it for:
 - install and setup docs
 - product explanations
 - licensing and update docs
@@ -54,7 +56,6 @@ Claude Code, Codex, Cursor, Windsurf, Hermes, OpenClaw, and any MCP-compatible A
 - **Portal:** [app.surfagent.app](https://app.surfagent.app)
 - **MCP Server:** [github.com/surfagentapp/surfagent-mcp](https://github.com/surfagentapp/surfagent-mcp)
 - **Canonical skills catalog:** [github.com/surfagentapp/surfagent-skills](https://github.com/surfagentapp/surfagent-skills)
-- **Legacy compatibility skill:** [github.com/surfagentapp/surfagent-skill](https://github.com/surfagentapp/surfagent-skill)
 - **Support:** [support@surfagent.app](mailto:support@surfagent.app)
 
-> Repo ownership: `surfagent-docs` is the canonical public docs repo, `surfagent-skills` is the canonical public skills repo, and `surfagent-skill` is legacy compatibility only while older install references are being migrated.
+> Short version: app first, then `surfagent-mcp`, then optional skills, then optional adapters.

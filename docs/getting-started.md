@@ -90,7 +90,7 @@ Most users only need:
 - SurfAgent
 - `surfagent-mcp`
 
-You may also want:
+Only add more when it helps:
 - **skills** for better workflows and execution rules
 - **adapters** for site-specific verbs like Gmail or Telegram Web
 
@@ -134,6 +134,6 @@ Full details:
 
 ## What to read next
 
-- [Connect Your AI Agent (MCP Server)](./mcp-server.md)
-- [Skills, Adapters, and MCP](./skills-and-adapters.md)
-- [FAQ & Troubleshooting](./faq.md)
+1. [Connect Your AI Agent (MCP Server)](./mcp-server.md)
+2. [Skills, Adapters, and MCP](./skills-and-adapters.md)
+3. [FAQ & Troubleshooting](./faq.md)

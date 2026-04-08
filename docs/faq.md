@@ -64,7 +64,10 @@ One command:
 ```bash
 hermes mcp add surfagent --command npx --args -y surfagent-mcp
 ```
-Hermes discovers all 24 browser tools automatically. The canonical skill catalog now lives in [`surfagent-skills`](https://github.com/surfagentapp/surfagent-skills). If you need the older single-repo install during migration, this legacy compatibility path still works: `hermes skills install github:surfagentapp/surfagent-skill`
+Hermes discovers all 24 browser tools automatically.
+
+If you also want reusable operating instructions, add skills from [`surfagent-skills`](https://github.com/surfagentapp/surfagent-skills).
+Only use the older `surfagent-skill` install path when you are maintaining a legacy setup.
 
 ## Is the MCP server free?
 

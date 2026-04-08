@@ -85,8 +85,8 @@ Each adapter repo should own its own adapter-specific README, tools, proof rules
 For most people, the right setup is:
 1. Install SurfAgent
 2. Connect `surfagent-mcp`
-3. Add skills from `surfagent-skills` if needed
-4. Use a site adapter only when the workflow benefits from it
+3. Add skills from `surfagent-skills` only if needed
+4. Add a site adapter only when the workflow clearly benefits from it
 
 ## What not to do
 
@@ -99,3 +99,5 @@ You do **not** need all of these to get started:
 - deep architecture knowledge
 
 You mainly need the app and MCP. Everything else is optional layering.
+
+That is the whole product story in one line: app first, MCP second, skills third, adapters last.

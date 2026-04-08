@@ -17,7 +17,7 @@ Most users only need this:
 npx -y surfagent-mcp
 ```
 
-Then add that MCP server to their AI client.
+Then register that MCP server in their AI client.
 
 ## Before you begin
 
@@ -113,7 +113,8 @@ MCP is the browser tool layer.
 If you also want better workflows or site-specific behavior, read:
 - [Skills, Adapters, and MCP: What to Use When](./skills-and-adapters.md)
 - canonical skills catalog: <https://github.com/surfagentapp/surfagent-skills>
-- legacy compatibility repo: <https://github.com/surfagentapp/surfagent-skill>
+
+Only reach for the legacy `surfagent-skill` repo when an older install path still depends on it.
 
 ## Available tools
 

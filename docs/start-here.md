@@ -14,33 +14,15 @@ That means:
 
 ## The fastest path to working setup
 
-### 1. Install SurfAgent on Windows
-Start here if you have not installed the app yet:
-- [Getting Started](./getting-started.md)
-
-### 2. Connect your AI agent
-Once the app is running, connect your AI tool through MCP:
-- [Connect Your AI Agent (MCP Server)](./mcp-server.md)
-
-### 3. Decide how you want your agent to work
-You have three layers available:
-
-- **Raw MCP tools** for general browser control
-- **Skills** for better execution patterns and reusable workflows
-- **Adapters** for site-specific verbs like Gmail or Telegram Web
-
-Use this guide:
-- [Skills, Adapters, and MCP: What to Use When](./skills-and-adapters.md)
-
-### 4. Learn the basics only if you need them
-If you want the underlying architecture and API surface:
-- [How It Works](./how-it-works.md)
-
-### 5. Handle ownership, licensing, and maintenance
-- [License & Activation](./license.md)
-- [Auto-Updates](./updates.md)
-- [FAQ & Troubleshooting](./faq.md)
-- [Repositories & Ownership](./repositories.md)
+1. Install SurfAgent on Windows: [Getting Started](./getting-started.md)
+2. Connect your AI agent through MCP: [Connect Your AI Agent (MCP Server)](./mcp-server.md)
+3. Decide whether you also need skills or adapters: [Skills, Adapters, and MCP: What to Use When](./skills-and-adapters.md)
+4. Only if needed, read deeper product details: [How It Works](./how-it-works.md)
+5. Handle ownership, licensing, and maintenance:
+   - [License & Activation](./license.md)
+   - [Auto-Updates](./updates.md)
+   - [FAQ & Troubleshooting](./faq.md)
+   - [Repositories & Ownership](./repositories.md)
 
 ## Recommended user journey
 
@@ -64,8 +46,8 @@ If you want the underlying architecture and API surface:
 Most users only need:
 - the SurfAgent app
 - the `surfagent-mcp` package
-- optionally the canonical skills catalog in `surfagent-skills`
+- maybe a skill or two
 
-Most users do **not** need to care about every public repo on day one.
+Most users do **not** need every public repo on day one.
 
-That repo detail exists for contributors, advanced users, and people wiring custom flows.
+That detail mainly matters for contributors, advanced users, and people wiring custom flows.
